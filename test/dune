@@ -3,6 +3,6 @@
  (inline_tests
   (flags
    (:standard -source-tree-root .)))
- (libraries core binance_protocol yojson)
+ (libraries core binance_protocol exchange-core yojson ppx_yojson_conv_lib)
  (preprocess
-  (pps ppx_jane)))
+  (pps ppx_jane ppx_yojson_conv)))
