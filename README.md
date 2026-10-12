@@ -2,7 +2,7 @@
 
 Binance USD-M Futures wire types and JSON codecs
 
-Built with [OxCaml](https://oxcaml.org) and the Jane Street library stack (Base, Core, Async).
+Built with [OxCaml](https://oxcaml.org) and the Jane Street library stack (Base, Core).
 
 The Binance counterpart of [hl-protocol](https://github.com/winterchill-trading/hl-protocol):
 types, JSON codecs and request signing only, no I/O. The API reference these types follow
