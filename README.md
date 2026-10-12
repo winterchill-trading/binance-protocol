@@ -18,6 +18,10 @@ opam install . --deps-only --with-test
 dune build && dune test
 ```
 
+CI installs the pinned siblings and the opam dependencies through the shared
+[ox-setup](https://github.com/winterchill-trading/infra/blob/main/docs/ci.md) action, which
+caches the built opam switch between runs.
+
 ## Modules
 
 All modules live under `Binance_protocol`. Wire types satisfy `Codec.S` (`sexp`, `equal`,
