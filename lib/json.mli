@@ -16,6 +16,10 @@ val member_exn : t -> key:string -> t
 (** [tag json ~key] reads a string-valued discriminator field, e.g. the event type ["e"]. *)
 val tag : t -> key:string -> string
 
+(** [with_tag json ~key ~value] prepends [key: value] to an object, e.g. the event type
+    ["e"] when encoding websocket events. *)
+val with_tag : t -> key:string -> value:string -> t
+
 (** Decodes a JSON string with [of_wire]; [name] is used in error messages. *)
 val enum_of_yojson : name:string -> of_wire:(string -> 'a option) -> t -> 'a
 

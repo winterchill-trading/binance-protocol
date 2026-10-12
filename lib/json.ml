@@ -33,6 +33,12 @@ let tag t ~key =
   | _ -> error (sprintf "field %S must be a string" key) t
 ;;
 
+let with_tag (t : t) ~key ~value : t =
+  match t with
+  | `Assoc fields -> `Assoc ((key, `String value) :: fields)
+  | _ -> error "with_tag: object expected" t
+;;
+
 let enum_of_yojson ~name ~of_wire (json : t) =
   match json with
   | `String s ->
