@@ -1,5 +1,5 @@
 (** Order status ([status], [X]). Rejected orders never get a status: the exchange answers
-    with an {!Error.t} instead. *)
+    with an {!Api_error.t} instead. *)
 
 open! Core
 
