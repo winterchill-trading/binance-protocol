@@ -1,0 +1,6 @@
+(library
+ (name binance_protocol)
+ (public_name binance-protocol)
+ (libraries core cryptokit yojson ppx_yojson_conv_lib fixed-decimal exchange-core)
+ (preprocess
+  (pps ppx_jane ppx_yojson_conv)))
